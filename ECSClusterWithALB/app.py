@@ -28,6 +28,6 @@ from ecs_cluster_with_alb.ecs_cluster_with_alb_stack import EcsClusterWithAlbSta
 
     # For more information, see https://docs.aws.amazon.com/cdk/latest/guide/environments.html
 app = core.App()
-EcsClusterWithAlbStack(app, "EcsClusterWithAlbStackUat", stage="uat", env=core.Environment(account='855035402640', region='us-east-2'))
-EcsClusterWithAlbStack(app, "EcsClusterWithAlbStackProd", stage="prod", env=core.Environment(account='855035402640', region='us-east-1'))
+EcsClusterWithAlbStack(app, "EcsClusterWithAlbStackUat", stage="uat", env=core.Environment(account='85123456789', region='us-east-2'))
+EcsClusterWithAlbStack(app, "EcsClusterWithAlbStackProd", stage="prod", env=core.Environment(account='85123456789', region='us-east-1'))
 app.synth()
