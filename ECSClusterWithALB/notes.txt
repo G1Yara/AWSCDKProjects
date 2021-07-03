@@ -1,0 +1,8 @@
+cdk init --language python
+
+https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-linux.html
+
+https://docs.aws.amazon.com/cdk/latest/guide/cli.html
+
+// cdk getting started
+https://docs.aws.amazon.com/cdk/latest/guide/getting_started.html

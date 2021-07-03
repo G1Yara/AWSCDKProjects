@@ -1,0 +1,11 @@
+-e .
+aws_cdk.aws_ecs
+aws_cdk.aws_ec2
+aws_cdk.aws_ecs_patterns
+aws_cdk.aws_ecr
+aws_cdk.aws_logs
+aws_cdk.aws_autoscaling
+aws_cdk.aws_rds
+aws_cdk.aws_secretsmanager
+aws_cdk.aws_globalaccelerator_endpoints
+aws_cdk.aws_logs
