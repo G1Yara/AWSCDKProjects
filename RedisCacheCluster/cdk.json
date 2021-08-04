@@ -1,0 +1,41 @@
+{
+  "app": "python3 app.py",
+  "context": {
+    "@aws-cdk/aws-apigateway:usagePlanKeyOrderInsensitiveId": true,
+    "@aws-cdk/core:enableStackNameDuplicates": "true",
+    "aws-cdk:enableDiffNoFail": "true",
+    "@aws-cdk/core:stackRelativeExports": "true",
+    "@aws-cdk/aws-ecr-assets:dockerIgnoreSupport": true,
+    "@aws-cdk/aws-secretsmanager:parseOwnedSecretName": true,
+    "@aws-cdk/aws-kms:defaultKeyPolicies": true,
+    "@aws-cdk/aws-s3:grantWriteWithoutAcl": true,
+    "@aws-cdk/aws-ecs-patterns:removeDefaultDesiredCount": true,
+    "@aws-cdk/aws-rds:lowercaseDbIdentifier": true,
+    "@aws-cdk/aws-efs:defaultEncryptionAtRest": true,
+    "@aws-cdk/aws-lambda:recognizeVersionProps": true,
+    "uat": {
+      "region": "us-east-2",
+      "account_id": "1234567890",
+      "vpc_id": "vpc-bec1234",
+      "security_group_name": "mySecurityGroup",
+      "elastic_cache_cluster_name" : "my-elastic-cache",
+      "elastic_cache_node_type": "cache.t3.micro",
+      "elastic_cache_engine": "redis",
+      "elastic_cache_subnet_name": "redis",
+      "elastic_cache_nodes": 1,
+      "elastic_redis_port": 6379
+    },
+    "prod": {
+      "region": "us-east-1",
+      "account_id": "1234567890",
+      "vpc_id": "vpc-bec1234",
+      "security_group_name": "mySecurityGroup",
+      "elastic_cache_cluster_name" : "my-elastic-cache",
+      "elastic_cache_node_type": "cache.t3.micro",
+      "elastic_cache_engine": "redis",
+      "elastic_cache_subnet_name": "redis-subnet",
+      "elastic_cache_nodes": 1,
+      "elastic_redis_port": 6379
+    }
+  }
+}
