@@ -1,0 +1,3 @@
+-e .
+aws_cdk.aws_msk
+aws_cdk.aws_logs

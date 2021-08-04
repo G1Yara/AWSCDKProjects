@@ -1,0 +1,48 @@
+{
+  "app": "python3 app.py",
+  "context": {
+    "@aws-cdk/aws-apigateway:usagePlanKeyOrderInsensitiveId": true,
+    "@aws-cdk/core:enableStackNameDuplicates": "true",
+    "aws-cdk:enableDiffNoFail": "true",
+    "@aws-cdk/core:stackRelativeExports": "true",
+    "@aws-cdk/aws-ecr-assets:dockerIgnoreSupport": true,
+    "@aws-cdk/aws-secretsmanager:parseOwnedSecretName": true,
+    "@aws-cdk/aws-kms:defaultKeyPolicies": true,
+    "@aws-cdk/aws-s3:grantWriteWithoutAcl": true,
+    "@aws-cdk/aws-ecs-patterns:removeDefaultDesiredCount": true,
+    "@aws-cdk/aws-rds:lowercaseDbIdentifier": true,
+    "@aws-cdk/aws-efs:defaultEncryptionAtRest": true,
+    "@aws-cdk/aws-lambda:recognizeVersionProps": true,
+    "uat": {
+      "msk_cluster_name": "kafka-uat",
+      "msk_nodes": 2,
+      "msk_instance_type": "kafka.t3.small",
+      "default_security_groups": [
+        "sg-123456",
+        "sg-123456"
+      ],
+      "default_vpc_subnets": [
+        "subnet-123456",
+        "subnet-123456"
+      ],
+      "log_group_name": "/aws/msk/kafka-uat-logs",
+      "kafka_version": "2.6.1",
+      "msk_storage_volume": 1
+    },
+    "prod": {
+      "msk_cluster_name": "kafka-prod",
+      "msk_nodes": 6,
+      "msk_instance_type": "kafka.m5.large",
+      "default_security_groups": [
+        "sg-123456"
+      ],
+      "default_vpc_subnets": [
+        "subnet-123456",
+        "subnet-123456"
+      ],
+      "log_group_name": "/aws/msk/kafka-prod-logs",
+      "kafka_version": "2.6.1",
+      "msk_storage_volume": 1024
+    }
+  }
+}
