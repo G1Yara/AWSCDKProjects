@@ -1,0 +1,89 @@
+{
+  "app": "python3 app.py",
+  "context": {
+    "@aws-cdk/aws-apigateway:usagePlanKeyOrderInsensitiveId": true,
+    "@aws-cdk/core:enableStackNameDuplicates": "true",
+    "aws-cdk:enableDiffNoFail": "true",
+    "@aws-cdk/core:stackRelativeExports": "true",
+    "@aws-cdk/aws-ecr-assets:dockerIgnoreSupport": true,
+    "@aws-cdk/aws-secretsmanager:parseOwnedSecretName": true,
+    "@aws-cdk/aws-kms:defaultKeyPolicies": true,
+    "@aws-cdk/aws-s3:grantWriteWithoutAcl": true,
+    "@aws-cdk/aws-ecs-patterns:removeDefaultDesiredCount": true,
+    "@aws-cdk/aws-rds:lowercaseDbIdentifier": true,
+    "@aws-cdk/aws-efs:defaultEncryptionAtRest": true,
+    "@aws-cdk/aws-lambda:recognizeVersionProps": true,
+    "uat": {
+      "region": "us-east-2",
+      "account_id": "1234567890",
+      "vpc_id": "vpc-12345",
+      "emr_cluster_volume_size": 50,
+      "security_group_name": "MyEmrClusterSg",
+      "ec2_key_name": "mykey",
+      "hadoop_version": "3.2.1",
+      "emr_cluster_name": "MyEmrCluster",
+      "emr_cluster_version": "emr-6.3.0",
+      "emr_cluster_job_role": "EMR_EC2_DefaultRole",
+      "emr_cluster_service_role": "EMR_DefaultRole",
+      "emr_cluster_log_s3_bucket": "s3://aws-logs-1234567890-us-east-2/elasticmapreduce/",
+      "emr_cluster_required_applications": [
+        "Hive",
+        "Hue",
+        "Pig",
+        "HBase",
+        "ZooKeeper",
+        "Phoenix"
+      ],
+      "emr_cluster_instance_count": 1,
+      "emr_cluster_instance_type": "m4.large",
+      "emr_cluster_instance_name": "core",
+      "emr_cluster_instance_size_in_gbs": 32,
+      "emr_cluster_instance_volume_type": "gp2",
+      "emr_cluster_hbase_storage": "s3",
+      "emr_cluster_hbase_s3_path": "s3://iu-bucket-uat/hbase/",
+      "acadia_services_security_groups": [
+        "sg-123456"
+      ],
+      "default_vpc_subnets": [
+        "subnet-123456",
+        "subnet-123456"
+      ]
+    },
+    "prod": {
+      "region": "us-east-1",
+      "account_id": "1234567890",
+      "vpc_id": "vpc-12345",
+      "emr_cluster_volume_size": 100,
+      "security_group_name": "MyEmrClusterSg",
+      "ec2_key_name": "mykey",
+      "hadoop_version": "3.2.1",
+      "emr_cluster_name": "MyEmrCluster",
+      "emr_cluster_version": "emr-6.3.0",
+      "emr_cluster_job_role": "EMR_EC2_DefaultRole",
+      "emr_cluster_service_role": "EMR_DefaultRole",
+      "emr_cluster_log_s3_bucket": "s3://aws-logs-1234567890-us-east-1/elasticmapreduce/",
+      "emr_cluster_required_applications": [
+        "Hive",
+        "Hue",
+        "Pig",
+        "HBase",
+        "ZooKeeper",
+        "Phoenix"
+      ],
+      "emr_cluster_instance_count": 10,
+      "emr_cluster_instance_type": "m4.large",
+      "emr_cluster_instance_name": "core",
+      "emr_cluster_instance_size_in_gbs": 64,
+      "emr_cluster_instance_volume_type": "gp2",
+      "emr_cluster_hbase_storage": "s3",
+      "emr_cluster_hbase_s3_path": "s3://iu-bucket-prod/hbase/",
+      "acadia_services_security_groups": [
+        "sg-123456"
+      ],
+      "default_vpc_subnets": [
+        "subnet-123456",
+        "subnet-123456"
+      ]
+    }
+  }
+}
